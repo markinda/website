@@ -1,0 +1,72 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:import/typescript",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
+    "rules": {
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "react/function-component-definition": [
+            2,
+            {
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
+            }
+        ],
+        "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+        "no-shadow": "off",
+        "class-methods-use-this": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "import/prefer-default-export": "off",
+        "react/require-default-props": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "react/jsx-boolean-value": "off",
+        "no-nested-ternary": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "max-len": "off",
+        "no-unneeded-ternary": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "no-return-await": "off",
+        "react/self-closing-comp": "off",
+        "no-plusplus": "off",
+        "camelcase": "off",
+        "linebreak-style": "off",
+        "prefer-destructuring": "off",
+        "spaced-comment": "off",
+        "react/jsx-props-no-spreading": "off",
+        "@typescript-eslint/no-shadow": "off",
+        "no-mixed-operators": "off",
+        "no-unsafe-optional-chaining": "off"
+    }
+}

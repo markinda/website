@@ -1,0 +1,22 @@
+// Base Breakpoints
+$breakpoints: (
+        'deskXL': 1919px,
+        'deskL': 1600px,
+        'deskM': 1365px,
+        'tabM': 1023px,
+        'tabS': 767px,
+        'mobM': 567px,
+        'mobS': 374px,
+);
+
+@mixin breakpoint-down($breakpoint) {
+  @media (max-width: map_get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up($breakpoint) {
+  @media (min-width: map_get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
